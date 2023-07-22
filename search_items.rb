@@ -41,13 +41,13 @@ input[1].times do
     b.push(gets.chomp)
 end
 
-result = []
-b.each do |b_str|
-    if a.include?(b_str)
-        result << a.index(b_str) + 1
-    else
-        result << -1
-    end
-end
-
-puts result
+# result = []
+# b.each do |b_str|
+#     if a.include?(b_str)
+#         result << a.index(b_str) + 1
+#     else
+#         result << -1
+#     end
+# end
+# puts result
+puts b.map { |b_str| a.include?(b_str) ? a.index(b_str) + 1 : -1 }
