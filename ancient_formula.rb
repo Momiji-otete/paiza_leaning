@@ -28,8 +28,11 @@
 # 198
 
 formula = gets.chomp.split('+')
-result = 0
-formula.each do |paiza_num|
-    result += paiza_num.count('/') + paiza_num.count('<') * 10
+# result = 0
+# formula.each do |paiza_num|
+#     result += paiza_num.count('/') + paiza_num.count('<') * 10
+# end
+result = formula.sum do |paiza_num|
+    paiza_num.count('/') + paiza_num.count('<') * 10
 end
 puts result
